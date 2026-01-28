@@ -7,7 +7,7 @@ mvn flyway:migrate -Dflyway.user=USER -Dflyway.password=TEST -Dflyway.url=jdbc:p
 COMMAND TO START SPRING BOOT APPLICATION USING CLI:
 mvn spring-boot:run
 
-COMMAND TO SETUP INTELIJ CONFIGURATION FOR SPRING BOOT APPLICATION:
+COMMAND TO SET UP INTELIJ CONFIGURATION FOR SPRING BOOT APPLICATION:
 1. Open IntelliJ IDEA.
 2. Go to 'Run' > 'Edit Configurations'.
 3. Click the '+' icon to add a new configuration and select 'Spring Boot'.
@@ -18,3 +18,6 @@ COMMAND TO SETUP INTELIJ CONFIGURATION FOR SPRING BOOT APPLICATION:
 8. Set the 'Use classpath of module' to the appropriate module.
 9. Click 'Apply' and then 'OK' to save the configuration.
 10. You can now run the application using this configuration by selecting it and clicking the 'Run
+
+SWAGGER URL:
+http://localhost:8080/swagger-ui/index.html
