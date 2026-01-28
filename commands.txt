@@ -1,0 +1,20 @@
+DOCKER COMMAND TO START POSTGRESQL DATABASE:
+docker run --name appointment-system-db -e POSTGRES_USER=USER -e POSTGRES_PASSWORD=TEST -e POSTGRES_DB=appointment-system -p 5432:5432
+
+COMMAND TO RUN FLYWAY MIGRATIONS:
+mvn flyway:migrate -Dflyway.user=USER -Dflyway.password=TEST -Dflyway.url=jdbc:postgresql://localhost:5432/appointment-system -Dflyway.locations=classpath:db/migration
+
+COMMAND TO START SPRING BOOT APPLICATION USING CLI:
+mvn spring-boot:run
+
+COMMAND TO SETUP INTELIJ CONFIGURATION FOR SPRING BOOT APPLICATION:
+1. Open IntelliJ IDEA.
+2. Go to 'Run' > 'Edit Configurations'.
+3. Click the '+' icon to add a new configuration and select 'Spring Boot'.
+4. Name the configuration (e.g., 'Appointment System Application').
+5. Set the 'Main class' to the main application class (e.g., 'com.example.appointmentsystem.AppointmentSystemApplication').
+6. Set the 'Working directory' to the root of your project.
+7. In the 'Program arguments': --spring.profiles.active=local
+8. Set the 'Use classpath of module' to the appropriate module.
+9. Click 'Apply' and then 'OK' to save the configuration.
+10. You can now run the application using this configuration by selecting it and clicking the 'Run
